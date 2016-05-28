@@ -1,0 +1,8 @@
+compile Rollingstats
+g++ -c -fpic RollingStats.cpp 
+gcc -shared -o libRollingStats.so RollingStats.o -I/usr/local/include
+
+swig RollingStats
+
+swig -c++ -python -classic RollingStats.i
+python setup.py build_ext --inplace
