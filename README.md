@@ -1,4 +1,4 @@
-# RollingStats -rolling statistics class
+# RollingStats - Rolling Statistics class
 ###### Usage
 import RollingStats
 
