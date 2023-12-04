@@ -1,8 +1,4 @@
-# RollingStats - C++ rolling statistics class with a python swig wrapper
-uses swig3.0, (can also compile using swig2.0)
-
-see compile script for compiling 
-
+# RollingStats -rolling statistics class
 ###### Usage
 import RollingStats
 
