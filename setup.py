@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
-from setuptools import setup, Extension
+from setuptools import setup
 
-RollingStats_module = Extension('_RollingStats', sources=[ 'RollingStats.cpp', 'RollingStats_wrap.cxx' ] )
-
-setup ( name='RollingStats',
-        version = '0.1',
-        author = 'Richard Albright',
-        description = "C++ Swig Wrapped RollingStats Class",
-        ext_modules = [ RollingStats_module ],
-        py_modules = [ "RollingStats" ] 
+setup( 
+    name='RollingStats',
+    version='0.3.1',
+    author='Rick Albright',
+    description="Rolling Statistics Class",
+    requires=['pandas', 'numpy'],
+    py_modules=['RollingStats'],
+    license='MIT License' 
 )

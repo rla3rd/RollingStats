@@ -1,0 +1,17 @@
+#!/bin/sh
+
+if [ -e _RollingStats.so ]; then
+    exit 0
+fi
+
+# swig RollingStats
+swig3.0 -c++ -python -classic RollingStats.i
+
+# compile Rollingstats
+g++ -c -fpic RollingStats.cpp 
+gcc -shared -o libRollingStats.so RollingStats.o -I/usr/local/include 
+
+# python build RollingStats
+python setup.py build_ext --inplace
+python setup.py install
+
